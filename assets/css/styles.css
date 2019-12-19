@@ -1,0 +1,274 @@
+body {
+	margin: 0;
+	/*font-size: 1.5em;*/
+	line-height: 1.6;
+	font-weight: 400;
+	color: #222;
+	font-family: 'Rajdhani', sans-serif;
+	background-color: #892528;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-image: url('../images/bg.png');
+	background-size: 100vw 100vh;
+    background-repeat: repeat-y;
+}
+
+.mb-intro {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.actions {
+	z-index: 10;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn {
+	margin: 0 5px;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 5px;
+	color: #892528;
+	background-color: white;
+}
+
+.btn:hover {
+	background-color: #ccc;	
+}
+
+.contact {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+}
+
+.contact-item {
+	font-size: 2em;
+	margin: 0 5px;
+	color: white;
+}
+
+
+.intro-logo {
+	z-index: 10;
+	width: 50px;
+	height: 50px;
+}
+
+.intro-logo img {
+	width: 50px;
+	height: 50px;
+}
+
+.intro-text {
+	text-align: center;
+	font-size: 2em;
+	z-index: 10;
+	color: white;
+}
+
+.section {
+	z-index: 10;
+	min-height: 100vh;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	word-break: wrap;
+	background-color: white;
+	padding: 50px;
+}
+
+.section-parts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-title {
+	font-size: 5em;
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.section-sub-title {
+	font-size: 4em;
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.section.about {
+	padding: 50px;
+	height: auto;
+	min-height: unset;
+}
+
+.section.red {
+	/*background-color: #892528;*/
+	background-color: transparent;
+	color: white;
+}
+
+.section-text {
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 1.2em;
+}
+
+.section.contribute {
+	min-height: unset;
+	margin-bottom: 0;
+}
+
+.section.red a {
+	color: yellow;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.contribute .section-text {
+	text-align: center;
+}
+
+.section.about .section-text {
+	max-width: 50%;
+}
+
+.footer {
+	background-color: white;
+	font-weight: 700;
+	text-align: center;
+}
+
+#particles-js {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background-color: #892528;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.download-options {
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.option-title {
+	font-weight: 500;
+	font-size: 1.5em;
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.download-option {
+	text-align: center;
+	color: black;
+	margin: 0 10px;
+	padding: 20px;
+	width: 300px;
+	height: 440px;
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.download-option a {
+	color: black !important;
+}
+
+.download-option.relay {
+	height: unset !important;
+}
+
+@media only screen and (max-width: 900px) {
+	.multiple-text-blocks {
+		flex-direction: column !important;
+		align-items: center !important;
+	}
+
+	.text-block {
+		width: 450px !important;
+	}
+}
+
+.multiple-text-blocks {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.text-block {
+	margin: 20px;
+	width: 300px;
+}
+
+.section.limitation, .section.technical{
+	min-height: unset;
+}
+
+.text-block-title {
+	font-weight: 700;
+	font-size: 1.5em;
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.text-block-text {
+	text-align: justify;
+  	text-justify: inter-word;
+}
+
+.download-btns {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.download-btn {
+	font-size: 2em;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	margin: 10px;
+	width: 100%;
+	border: 1px solid #892528;
+}
+
+.download-btn i {
+	font-weight: 400 !important;
+	mar
+}
+
+.download-btn:hover {
+	background-color: #892528;
+	color: white !important;
+}
