@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	/*font-size: 1.5em;*/
+	font-size: 1em;
 	line-height: 1.6;
 	font-weight: 400;
 	color: #222;
@@ -8,7 +8,7 @@ body {
 	background-color: #892528;
 }
 
-div {
+div, body, html {
 	box-sizing: border-box;
 }
 
@@ -21,8 +21,7 @@ div {
 	height: 100%;
 	width: 100%;
 	background-image: url('../images/bg.png');
-	background-size: 100vw 100vh;
-    background-repeat: repeat-y;
+    background-repeat: repeat;
 }
 
 .mb-intro {
@@ -35,15 +34,17 @@ div {
 }
 
 .actions {
+	font-size: 1.5em;
 	z-index: 10;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
 }
 
 .btn {
-	margin: 0 5px;
+	margin: 5px;
 	cursor: pointer;
 	padding: 5px;
 	border-radius: 5px;
@@ -65,7 +66,7 @@ div {
 }
 
 .contact-item {
-	font-size: 2em;
+	font-size: 3em;
 	margin: 0 5px;
 	color: white;
 }
@@ -84,7 +85,7 @@ div {
 
 .intro-text {
 	text-align: center;
-	font-size: 2em;
+	font-size: 3em;
 	z-index: 10;
 	color: white;
 }
@@ -110,12 +111,13 @@ div {
 }
 
 .section-title {
-	font-size: 5em;
+	text-align: center;
+	font-size: 3em;
 	font-family: 'Rajdhani', sans-serif;
 }
 
 .section-sub-title {
-	font-size: 4em;
+	font-size: 3em;
 	font-family: 'Rajdhani', sans-serif;
 }
 
@@ -154,10 +156,14 @@ div {
 }
 
 .section.about .section-text {
-	max-width: 50%;
+	width: 100%;
+	text-align: justify;
+	word-wrap: break-word;
+  	text-justify: inter-word;
 }
 
 .footer {
+	font-size: 0.75em;
 	background-color: white;
 	font-weight: 700;
 	text-align: center;
@@ -175,26 +181,28 @@ div {
 }
 
 .download-options {
+	flex-wrap: wrap;
 	margin: 10px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 }
 
 .option-title {
 	font-weight: 500;
-	font-size: 1.5em;
+	font-size: 2em;
 	font-family: 'Rajdhani', sans-serif;
 }
 
 .download-option {
 	text-align: center;
 	color: black;
-	margin: 0 10px;
+	margin: 10px;
 	padding: 20px;
-	width: 300px;
-	height: 440px;
+	width: 40%;
+	min-width: 250px;
+	max-width: 400px;
 	background-color: white;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -214,7 +222,7 @@ div {
 	}
 
 	.text-block {
-		width: 450px !important;
+		width: 90% !important;
 	}
 }
 
@@ -228,7 +236,7 @@ div {
 
 .text-block {
 	margin: 20px;
-	width: 300px;
+	width: 30%;
 }
 
 .section.limitation, .section.technical{
@@ -236,12 +244,14 @@ div {
 }
 
 .text-block-title {
+	text-align: center;
 	font-weight: 700;
-	font-size: 1.5em;
+	font-size: 2em;
 	font-family: 'Rajdhani', sans-serif;
 }
 
 .text-block-text {
+	font-size: 1.2em;
 	text-align: justify;
   	text-justify: inter-word;
 }
@@ -254,7 +264,7 @@ div {
 }
 
 .download-btn {
-	font-size: 2em;
+	font-size: 1.5em;
 	cursor: pointer;
 	border-radius: 5px;
 	text-align: center;
@@ -265,7 +275,6 @@ div {
 
 .download-btn i {
 	font-weight: 400 !important;
-	mar
 }
 
 .download-btn:hover {
