@@ -12,6 +12,11 @@ div, body, html {
 	box-sizing: border-box;
 }
 
+.des-container {
+	background-color: #f5f5f5;
+	padding: 50px;
+}
+
 .container {
 	display: flex;
 	position: relative;
@@ -21,16 +26,34 @@ div, body, html {
 	height: 100%;
 	width: 100%;
 	background-image: url('../images/bg.png');
-    background-repeat: repeat;
+	background-repeat: repeat;
 }
 
 .mb-intro {
+	padding: 20px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	height: 100vh;
+	min-height: 100vh;
+}
+
+.actions-text {
+	font-size: 1.5em;
+	z-index: 10;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.action-text {
+	color: white;
+	cursor: pointer;
+	text-decoration: underline;
+	margin: 10px;
 }
 
 .actions {
@@ -46,10 +69,18 @@ div, body, html {
 .btn {
 	margin: 5px;
 	cursor: pointer;
-	padding: 5px;
+	padding: 10px;
 	border-radius: 5px;
 	color: #892528;
 	background-color: white;
+}
+
+.action-text:hover {
+	color: #ccc;
+}
+
+.contact-item:hover {
+	color: #ccc;
 }
 
 .btn:hover {
@@ -74,18 +105,21 @@ div, body, html {
 
 .intro-logo {
 	z-index: 10;
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 }
 
 .intro-logo img {
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 }
 
 .intro-text {
+	font-weight: 700;
+	font-family: 'Rajdhani', sans-serif;
 	text-align: center;
-	font-size: 3em;
+	font-size: 4em;
+	font-weight: 700;
 	z-index: 10;
 	color: white;
 }
@@ -99,7 +133,7 @@ div, body, html {
 	justify-content: flex-start;
 	align-items: center;
 	word-break: wrap;
-	background-color: white;
+	background-color: #f5f5f5;
 	padding: 50px;
 }
 
@@ -112,7 +146,8 @@ div, body, html {
 
 .section-title {
 	text-align: center;
-	font-size: 3em;
+	font-size: 3.5em;
+	font-weight: 700;
 	font-family: 'Rajdhani', sans-serif;
 }
 
@@ -121,7 +156,7 @@ div, body, html {
 	font-family: 'Rajdhani', sans-serif;
 }
 
-.section.about {
+.section.about, .section.download {
 	padding: 50px;
 	height: auto;
 	min-height: unset;
@@ -151,15 +186,10 @@ div, body, html {
 	text-decoration: none;
 }
 
-.contribute .section-text {
-	text-align: center;
-}
-
 .section.about .section-text {
 	width: 100%;
-	text-align: justify;
 	word-wrap: break-word;
-  	text-justify: inter-word;
+	text-justify: inter-word;
 }
 
 .footer {
@@ -185,26 +215,47 @@ div, body, html {
 	margin: 10px;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.download-option:hover .option-title {
+	color: #ccc;
+}
+
+.download-option:hover .option-icon {
+	background-color: #ccc;
+}
+
+.option-icon {
+	display: flex;
+	align-items: center;
 	justify-content: center;
-	align-items: stretch;
+	background-color: white;
+	border-radius: 50%;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	font-size: 4em;
+	color: #892528;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.option-icon i {
+	line-height: 1.6 !important;
+	font-weight: 400 !important;
 }
 
 .option-title {
+	color: white;
 	font-weight: 500;
 	font-size: 2em;
 	font-family: 'Rajdhani', sans-serif;
 }
 
 .download-option {
+	min-width: 170px;
 	text-align: center;
-	color: black;
 	margin: 10px;
-	padding: 20px;
-	width: 40%;
-	min-width: 250px;
-	max-width: 400px;
-	background-color: white;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .download-option a {
@@ -253,7 +304,7 @@ div, body, html {
 .text-block-text {
 	font-size: 1.2em;
 	text-align: justify;
-  	text-justify: inter-word;
+	text-justify: inter-word;
 }
 
 .download-btns {
@@ -280,4 +331,20 @@ div, body, html {
 .download-btn:hover {
 	background-color: #892528;
 	color: white !important;
+}
+
+#homebtn {
+	color: #222222;
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 99;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 3em;
+}
+
+#homebtn:hover {
 }
