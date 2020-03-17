@@ -12,6 +12,32 @@ div, body, html {
 	box-sizing: border-box;
 }
 
+.help-header {
+	text-align: center;
+	font-size: 3rem;
+}
+
+.help-step-text {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.25rem;
+}
+
+.help-step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.help-xtra-steps {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.25rem;
+}
+
+.help-step-image {
+	margin-bottom: 50px;
+}
+
 .des-container {
 	background-color: #f5f5f5;
 	padding: 50px;
