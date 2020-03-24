@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>MassBrowser</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/fe0b14f795.js" crossorigin="anonymous"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<link rel="apple-touch-icon" sizes="180x180" href="https://massbrowser.cs.umass.edu/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="https://massbrowser.cs.umass.edu/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="https://massbrowser.cs.umass.edu/favicon-16x16.png">
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani|Roboto&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
 	<link rel="manifest" href="https://massbrowser.cs.umass.edu/site.webmanifest">
 	<link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -22,13 +23,14 @@
 					How to Open/Close MassBrowser
 				</div>
 				<div class="help-page-text">
-					You could open MassBrowser client by double clicking on the desktop shortcut and you could close the application GUI and it will continue running in the background.
+					You can open the MassBrowser client by double clicking on the desktop shortcut. Then, click "Open MassBrowser" button to open the browser. You can close the setting page at any time.
 				</div>
 				<div class="help-page-image">
 					<img src="./assets/images/home.png">
 				</div>
+
 				<div class="help-page-text">
-					If you need to access MassBrowser client or you want to stop the application completely after you close the application GUI, follow these steps to open the application again:
+					Note that closing the browser will not close the MassBrowser application and double click action on the desktop shortcut will open the MassBrowser(Firefox) not the setting page. If you need to close it or reopen it, you can find it as a hidden application icon:
 				</div>
 				<div class="help-xtra-steps">
 					<ol>
@@ -45,12 +47,12 @@
 							Find MassBrowser icon and press <strong>right click</strong> on the icon
 							</div>
 							<div class="help-page-image">
-								<img src="./assets/images/quick-bar-2.png">	
+								<img src="./assets/images/quick-bar-2.png">
 							</div>
 						</li>
 						<li>
 							<div class="help-page-text">
-								Now you can re-open the application GUI by clicking on <strong>"Open Settings"</strong> or you can close the MassBrowser completely by clicking on <strong>"Exit"</strong>.
+								Now you can re-open the MassBrowser setting page or its browser, or you can exit the application.
 							</div>
 							<div class="help-page-image">
 								<img src='./assets/images/quick-bar-3.png'>
@@ -66,25 +68,88 @@
 					How to Unblock a Certain Page
 				</div>
 				<div class="help-page-text">
-					You need to have MassBrowser plugin installed on your Firefox to unblock a certain page that we are not currently supporting. If you are using <a href="https://massbrowser.cs.umass.edu/#download">the bundle version</a>, the plugin is already installed and you should be able to see the plugin icon on the top right side of your Firefox window.
+					<div class="help-text-section-title">
+						Installing the plugin:
+					</div>
+					You need to have MassBrowser plugin installed on your Firefox to unblock a certain page that we are not currently supporting. If you are using <a href="https://massbrowser.cs.umass.edu/#download">the bundle version</a>, the plugin is already installed and you should be able to see the plugin icon on the top right side of your Firefox window.<br>
+					If you do not see the plugin, make sure MassBrowser is running and then open <a href="http://localhost:6423/plugin">this link</a> using your Firefox.
 					<br>
-					Click on the Massbrowser plugin and then click on <strong>"Unblock This Website"</strong>. Now MassBrowser will remember to use Tor for this website.
+					<div class="help-text-section-title">
+						Using the plugin:
+					</div>
+					Click on the MassBrowser plugin and then click on <strong>"Unblock This Website"</strong>. Now MassBrowser will remember to use Tor for this website.
 				</div>
 				<div class="help-page-image">
 					<img src='./assets/images/plugin.png'>
-				</div>				
+				</div>
 			</div>
 
 
-			<div class="help-page" id="lang">
+			<div class="help-page" id="settings">
 				<div class="help-page-title">
-					How to Change MassBrowser Language
+					Change the Settings of MassBrowser
 				</div>
 				<div class="help-page-image">
 					<img src="./assets/images/settings.png">
 				</div>
 				<div class="help-page-text">
-					You could change the settings of your MassClient in this page. At this moment we support English and Chinese. Use the drop down infront of the <strong>"Language Setting"</strong> to change your client language. You could always change this setting at anytime.
+					You could change the settings of your MassClient in this page.<br>
+					<div class="help-text-section-title">
+						Change Language:
+					</div>
+					 At this moment we support English and Chinese. Use the drop down in front of the <strong>"Language Setting"</strong> to change your client language. You could always change this setting at anytime.<br>
+					<div class="help-text-section-title">
+						Send us feedback:
+					</div>
+					You can send us feedback through the "Feedback tab".<br>
+					<div class="help-text-section-title">
+						See your connections:
+					</div>
+					Navigate to the "STATS" tab to see your current connections.
+				</div>
+			</div>
+
+
+			<div class="help-page" id="faqs">
+				<div class="help-page-title">
+					Frequently Asked Questions
+				</div>
+				<div class="help-page-text">
+					<div class="faq-item">
+						<div class="faq-item-q">
+							My Firefox says "The proxy server is refusing connections", what should I do?
+						</div>
+						<div class="faq-item-a">
+							Make sure your MassBrowser is running. If you are not using the bundle version check the proxy settings in your firefox network section.
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-item-q">
+							The website I want to visit is still censored. What should I do?
+						</div>
+						<div class="faq-item-a">
+							To unblock everything you need to use the plugin. Check <a href="#unblock">this guide</a> to unblock a certain website.
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-item-q">
+							Do I have privacy/anonymity when using MassBrowser?
+						</div>
+						<div class="faq-item-a">
+							Please refer to our <a href="">privacy policy</a> to see our privacy protections. In short, if you need  privacy protection, you should use privacy tools like Tor (good news, you can use Tor through MassBrowser by going to our setting page). When you use MassBrowser, you should assume that third-parties will learn the websites that you visit (but not their contents for HTTPS connections). 
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<div class="faq-item-q">
+							How do I use MassBrowser to unblock Telegram or Tor? 
+						</div>
+						<div class="faq-item-a">
+							You need to download Tor or Telegram. Then, go to the setting page of MassBrowser and change the setting of Tor/Telegram to tunnel their traffic through MassBrowser. 
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -110,10 +175,16 @@
 				</div>
 
 				<div class="help-pages-list">
-					<a class="help-page-item" href="#lang">
-						How to Change MassBrowser Language
+					<a class="help-page-item" href="#settings">
+						Change the Settings of MassBrowser
 					</a>
-				</div>			
+				</div>
+
+				<div class="help-pages-list">
+					<a class="help-page-item" href="#faqs">
+						Frequently Asked Questions (FAQ)
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
