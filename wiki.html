@@ -13,11 +13,17 @@
 	<link rel="manifest" href="https://massbrowser.cs.umass.edu/site.webmanifest">
 	<link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body>
+<body onload="check();">
+	<div id="check-status">
+		<div class="success" id="check-status-suc">
+			Congratulations! You are using MassBrowser.
+		</div>
+		<div class="failed" id="check-status-failed">
+			Sorry! You are not using MassBrowser.
+		</div>
+	</div>
 	<div class="help-container">
 		<div class="help-pages">
-
-
 			<div class="help-page" id="o-c-mb">
 				<div class="help-page-title">
 					How to Open/Close MassBrowser
@@ -45,7 +51,7 @@
 						</li>
 						<li>
 							<div class="help-page-text">
-							Find MassBrowser icon and press <strong>right click</strong> on the icon
+								Find MassBrowser icon and press <strong>right click</strong> on the icon
 							</div>
 							<div class="help-page-image">
 								<img src="./assets/images/quick-bar-2.png">
@@ -98,7 +104,7 @@
 					<div class="help-text-section-title">
 						Change Language:
 					</div>
-					 At this moment we support English and Chinese. Use the drop down in front of the <strong>"Language Setting"</strong> to change your client language. You could always change this setting at anytime.<br>
+					At this moment we support English and Chinese. Use the drop down in front of the <strong>"Language Setting"</strong> to change your client language. You could always change this setting at anytime.<br>
 					<div class="help-text-section-title">
 						Send us feedback:
 					</div>
@@ -189,5 +195,25 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		function check() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange=function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var res = JSON.parse(this.responseText);
+					console.log(res)
+					if (res['status'] == 'Yes') {
+						console.log('yes')
+						document.getElementById("check-status-suc").style.display = "block";
+					} else {
+						document.getElementById("check-status-failed").style.display = "block";
+						console.log('no')
+					}
+				}
+			};
+			xhttp.open("GET", "https://dev2.yaler.co/api/check", true);
+			xhttp.send();
+		}
+	</script>
 </body>
 </html>

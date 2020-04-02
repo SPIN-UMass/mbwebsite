@@ -16,6 +16,25 @@ div, body, html {
 font-size: 16px;
 }
 
+#check-status {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.success {
+	display: none;
+	background-color: green;
+	color: white;
+	font-weight:  700;
+}
+
+.failed {
+	display: none;
+	background-color: #892528;
+	font-weight:  700;
+	color: white;
+}
+
 .help-pages-box {
 	font-size: 0.875rem;
 	width: 300px;
